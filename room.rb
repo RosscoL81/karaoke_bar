@@ -17,4 +17,16 @@ def guests_count
   return @guest_list.length()
 end
 
+def add_guest(guest)
+  return @guest_list.push(guest)
+end
+
+def guest_out(guest)
+  return @guest_list.delete(guest)
+end
+
+def add_song(song)
+  return @songs_list.push(song)
+end
+
 end

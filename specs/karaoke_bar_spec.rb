@@ -10,7 +10,7 @@ class KaraokeBarTest < MiniTest::Test
   def setup
     @karaoke_bar = KaraokeBar.new("Ross's Bar", 500, [@room1, @room2])
 
-    @room1 = Room.new("McFly Room", 4, [@song1, @song2], [@guest1, @guest2, @guest3])
+    @room1 = Room.new("McFly Room", 3, [@song1, @song2], [@guest1, @guest2])
     @song1 = Song.new("Obviously")
     @song2 = Song.new("Sorry's not good enough")
     @guest1 = Guest.new("Danny", 10, "Star Girl")
@@ -40,5 +40,7 @@ class KaraokeBarTest < MiniTest::Test
   def test_bar_has_rooms
     assert_equal(2, @karaoke_bar.rooms_count)
   end
+
+
 
 end
