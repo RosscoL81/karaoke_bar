@@ -49,5 +49,17 @@ class RoomTest < MiniTest::Test
     assert_equal(3, @room1.song_count)
   end
 
+  def test_room_over_capacity__returns_false
+    assert_equal(false, @room1.room_full?(@room1))
+  end
+
+
+  def test_check_room_capacity_before_entering
+    @room1.room_at_capacity(@room1, @guest4)
+    assert_equal(3, @room1.guests_count)
+  end
+
+
+
 
 end

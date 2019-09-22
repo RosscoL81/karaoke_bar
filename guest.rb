@@ -8,4 +8,8 @@ def initialize(name, wallet, favourite_song)
   @favourite_song = favourite_song
 end
 
+def pay_for_entry(karaoke_bar)
+  @wallet -= karaoke_bar.price()
+end
+
 end

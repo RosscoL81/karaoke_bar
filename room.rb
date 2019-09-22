@@ -29,4 +29,15 @@ def add_song(song)
   return @songs_list.push(song)
 end
 
+def room_full?(room)
+  return @guest_list.length()>=room.capacity()
+end
+
+
+  #
+  def room_at_capacity(room, guest)
+    return if room_full?(room)
+    room.add_guest(guest)
+  end
+
 end
